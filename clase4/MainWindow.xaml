@@ -17,16 +17,20 @@
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
-            <Label Content="Paises">
+        <StackPanel Name="checkboxPanel" Grid.Column="0">
+            <Label Name="stateLabel" Content="Paises">
                 
             </Label>
-            <CheckBox Content="Seleccionar Todos" Name="TodosCheck" IsThreeState="True">
+            <CheckBox Content="Seleccionar Todos" Name="TodosCheck" IsThreeState="True" Click="AllCheck_Checked">
             </CheckBox>
-            <CheckBox Content="Palestina" Name="palestinaCheck" IsThreeState="True">
+            <CheckBox Content="Uruguay" Name="uruguayCheck" IsThreeState="True" Click="OptionCheck_Click" >
+            </CheckBox>
+            <CheckBox Content="Brasil" Name="brasilCheck" IsThreeState="True" Click="OptionCheck_Click">
+            </CheckBox>
+            <CheckBox Content="USA" Name="usaCheck" IsThreeState="True" Click="OptionCheck_Click">
             </CheckBox>
 
-            
+
         </StackPanel>
         
         <StackPanel Grid.Column="1">

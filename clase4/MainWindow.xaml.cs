@@ -23,6 +23,9 @@ namespace clase4
         public MainWindow()
         {
             InitializeComponent();
+
+
+
             List<ciudades> ListaCiudades = new List<ciudades>();
             ListaCiudades.Add(new ciudades()
             {
@@ -40,6 +43,43 @@ namespace clase4
 
             }); ;
             ComboBoxCiudades.ItemsSource = ListaCiudades;
+
+            
+            
+
+        }
+
+        private void AllCheck_Checked(object sender, RoutedEventArgs e)
+        {
+            
+            
+            if (TodosCheck.IsChecked == true)
+            {
+                uruguayCheck.IsChecked = true;
+                usaCheck.IsChecked = true;
+                brasilCheck.IsChecked = true;
+            }
+            
+        }
+
+        private void OptionCheck_Click(object sender, RoutedEventArgs e)
+        {
+            if (uruguayCheck?.IsChecked == true && usaCheck?.IsChecked == true && brasilCheck?.IsChecked == true)
+            {
+                TodosCheck.IsChecked = true;
+            }
+            else if (uruguayCheck?.IsChecked == true || usaCheck?.IsChecked == true || brasilCheck?.IsChecked == true 
+                  || uruguayCheck?.IsChecked == null || usaCheck?.IsChecked == null || brasilCheck?.IsChecked == null)
+            {
+                TodosCheck.IsChecked = null;
+            }
+            else
+            {
+                TodosCheck.IsChecked = false;
+            }
+
+             
+            
         }
     }
 }
